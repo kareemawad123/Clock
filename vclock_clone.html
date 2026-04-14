@@ -507,7 +507,7 @@
 <div class="wrap" id="app">
   <div class="top-bar">
     <span class="logo">Clock</span>
-    <button class="theme-btn" id="themeBtn">dark mode</button>
+    <button class="theme-btn" id="themeBtn">Dark Mode</button>
   </div>
 
   <div class="tabs">
@@ -603,7 +603,7 @@
   if (timerFullscreenArea) {
     timerFullscreenArea.classList.add('light');
   }
-  themeBtn.textContent = 'dark mode';
+  themeBtn.textContent = 'Dark Mode';
   themeBtn.onclick = () => {
     isDark = !isDark;
     document.body.classList.toggle('light', !isDark);
@@ -620,7 +620,7 @@
         }
       }
     }
-    themeBtn.textContent = isDark ? 'light mode' : 'dark mode';
+    themeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
   };
 
   function switchTab(t) {
