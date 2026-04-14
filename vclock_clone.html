@@ -106,7 +106,7 @@
     text-align: center;
     border-radius: 7px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 18px;
     color: var(--muted);
     transition: all .2s;
     border: none;
@@ -116,7 +116,8 @@
   .tab.active {
     background: var(--surface);
     color: var(--text);
-    font-weight: 500
+    font-weight: 500;
+
   }
 
   .panel {
@@ -521,10 +522,10 @@
   </div>
 
   <div class="tabs">
-    <button class="tab active" onclick="switchTab('clock')">clock</button>
-    <button class="tab" onclick="switchTab('alarm')">alarm</button>
-    <button class="tab" onclick="switchTab('timer')">timer</button>
-    <button class="tab" onclick="switchTab('stopwatch')">stopwatch</button>
+    <button class="tab active" onclick="switchTab('clock')">Clock</button>
+    <button class="tab" onclick="switchTab('alarm')">Alarm</button>
+    <button class="tab" onclick="switchTab('timer')">Timer</button>
+    <button class="tab" onclick="switchTab('stopwatch')">Stopwatch</button>
   </div>
 
   <div id="panel-clock" class="panel active">
