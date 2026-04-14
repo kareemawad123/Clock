@@ -1,9 +1,15 @@
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KClock</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23534AB7'/%3E%3Cpath d='M50 25v25l20 12' stroke='%23fff' stroke-width='10' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
   :root {
     --bg: #0f0f0f;
@@ -808,3 +814,5 @@
     document.getElementById('lapsList').innerHTML = laps.map(l => `<div class="lap-item"><span class="lap-num">lap ${l.n}</span><span class="lap-diff">+${fmtSW(l.diff)}</span><span class="lap-time">${fmtSW(l.total)}</span></div>`).join('');
   }
 </script>
+</body>
+</html>
