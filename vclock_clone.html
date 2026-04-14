@@ -61,20 +61,30 @@
   }
 
   .logo {
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--accent)
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .logo-icon {
+    font-size: 1.2em;
+    line-height: 1;
+    color: inherit;
   }
 
   .theme-btn {
     background: var(--btn-bg);
     border: 0.5px solid var(--btn-border);
     color: var(--text);
-    padding: 6px 14px;
-    border-radius: 8px;
+    padding: 8px 16px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 13px;
-    transition: background .2s
+    font-size: 14px;
+    transition: background .2s;
   }
 
   .theme-btn:hover {
@@ -506,8 +516,8 @@
 
 <div class="wrap" id="app">
   <div class="top-bar">
-    <span class="logo">Clock</span>
-    <button class="theme-btn" id="themeBtn">Dark Mode</button>
+    <span class="logo"><span class="logo-icon" aria-hidden="true">⏰</span>KCLOCK</span>
+    <button class="theme-btn" id="themeBtn">🌙 Dark Mode</button>
   </div>
 
   <div class="tabs">
@@ -603,7 +613,7 @@
   if (timerFullscreenArea) {
     timerFullscreenArea.classList.add('light');
   }
-  themeBtn.textContent = 'Dark Mode';
+  themeBtn.innerHTML = '🌙 Dark Mode';
   themeBtn.onclick = () => {
     isDark = !isDark;
     document.body.classList.toggle('light', !isDark);
@@ -620,7 +630,7 @@
         }
       }
     }
-    themeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    themeBtn.innerHTML = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
   };
 
   function switchTab(t) {
